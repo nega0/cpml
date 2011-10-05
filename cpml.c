@@ -30,6 +30,7 @@ struct arithmetic {
 		char *	library;
 	} implementation[12];
 } function[] = {
+	// original functions
 	{ "acos",  { -.99, -1 },  { { "acos",  "libm.so" }, { "amd_acos",  "libamdlibm.so" }, 0x00 } }, //{ "acos",  "libcpml.so" }, { "F_acos",  "libcpml.so" }, { "acos",  "libimf.so" }, 0x00 } },
 	{ "asin",  { .99, -1 },   { { "asin",  "libm.so" }, { "amd_asin",  "libamdlibm.so" }, 0x00 } }, //{ "asin",  "libcpml.so" }, { "F_asin",  "libcpml.so" }, { "asin",  "libimf.so" }, 0x00 } },
 	{ "atan",  { 200., -1 },  { { "atan",  "libm.so" }, { "amd_atan",  "libamdlibm.so" }, 0x00 } }, //{ "atan",  "libcpml.so" }, { "F_atan",  "libcpml.so" }, { "atan",  "libimf.so" }, 0x00 } },
@@ -43,6 +44,35 @@ struct arithmetic {
 	{ "sin",   { 1.96, -1 },  { { "sin",   "libm.so" }, { "amd_sin",   "libamdlibm.so" }, 0x00 } }, //{ "sin",   "libcpml.so" }, { "F_sin",   "libcpml.so" }, { "sin",   "libimf.so" }, 0x00 } },
 	{ "sqrt",  { 10.0, -1 },  { { "sqrt",  "libm.so" }, { "amd_sqrt",  "libamdlibm.so" }, 0x00 } }, //{ "sqrt",  "libcpml.so" }, { "F_sqrt",  "libcpml.so" }, { "sqrt",  "libimf.so" }, 0x00 } },
 	{ "tan",   { 7.85, -1 },  { { "tan",   "libm.so" }, { "amd_tan",   "libamdlibm.so" }, 0x00 } }, //{ "tan",   "libcpml.so" }, { "F_tan",   "libcpml.so" }, { "tan",   "libimf.so" }, 0x00 } },
+
+	// more amd functions
+	// hyperbolic
+	{ "cosh",  { 1.57, -1 }, { { "cosh",  "libm.so" }, { "amd_cosh",  "libamdlibm.so" }, 0x00 } },
+	{ "sinh",  { 1.96, -1 }, { { "sinh",  "libm.so" }, { "amd_sinh",  "libamdlibm.so" }, 0x00 } },
+	{ "tanh",  { 7.85, -1 }, { { "tanh",  "libm.so" }, { "amd_tanh",  "libamdlibm.so" }, 0x00 } },
+	{ "acosh", { -.99, -1 }, { { "acosh", "libm.so" }, { "amd_acosh", "libamdlibm.so" }, 0x00 } },
+	{ "asinh", { .99,  -1 }, { { "asinh", "libm.so" }, { "amd_asinh", "libamdlibm.so" }, 0x00 } },
+	{ "atanh", { 200., -1 }, { { "atanh", "libm.so" }, { "amd_atanh", "libamdlibm.so" }, 0x00 } },
+
+	// exp & log
+	{ "exp2",  { 2.1, -1 }, { { "exp2",  "libm.so" }, { "amd_exp2",  "libamdlibm.so" }, 0x00 } },
+	{ "exp10", { 2.1, -1 }, { { "exp10", "libm.so" }, { "amd_exp10", "libamdlibm.so" }, 0x00 } },
+	{ "expm1", { 2.1, -1 }, { { "expm1", "libm.so" }, { "amd_expm1", "libamdlibm.so" }, 0x00 } },
+	{ "log2",  { 2.1, -1 }, { { "log2",  "libm.so" }, { "amd_log2",  "libamdlibm.so" }, 0x00 } },
+	{ "log1p", { 2.1, -1 }, { { "log1p", "libm.so" }, { "amd_log1p", "libamdlibm.so" }, 0x00 } },
+	{ "logb",  { 2.1, -1 }, { { "logb",  "libm.so" }, { "amd_logb",  "libamdlibm.so" }, 0x00 } },
+
+	// pow & abs
+	{ "cbrt",  { 10.0, -1 }, { { "cbrt", "libm.so" }, { "amd_cbrt", "libamdlibm.so" }, 0x00 } },
+	{ "fabs",  { 7.85, -1 }, { { "fabs", "libm.so" }, { "amd_fabs", "libamdlibm.so" }, 0x00 } },
+
+	// nearest int
+	{ "ceil",      { 7.85, -1 }, { { "ceil",  "libm.so" }, { "amd_ceil",  "libamdlibm.so" }, 0x00 } },
+	{ "floor",     { 7.85, -1 }, { { "floor", "libm.so" }, { "amd_floor", "libamdlibm.so" }, 0x00 } },
+	{ "trunc",     { 7.85, -1 }, { { "trunc", "libm.so" }, { "amd_trunc", "libamdlibm.so" }, 0x00 } },
+	{ "rint",      { 7.85, -1 }, { { "rint",  "libm.so" }, { "amd_rint",  "libamdlibm.so" }, 0x00 } },
+	{ "round",     { 7.85, -1 }, { { "round", "libm.so" }, { "amd_round", "libamdlibm.so" }, 0x00 } },
+	{ "nearbyint", { 7.85, -1 }, { { "nearbyint", "libm.so" }, { "amd_nearbyint", "libamdlibm.so" }, 0x00 } },
 	0x00
 };
 
