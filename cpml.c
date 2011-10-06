@@ -1,4 +1,16 @@
 /* -*- mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 8; -*- */
+
+/**
+ *
+ * Copyright (c) 2011 Don La Dieu
+ * Copyright (c) 2006 Tavis Ormandy
+ *
+ * This file is distributed freely and without warranty under the
+ * terms of the GPLv2. See the accompanying file COPYING or
+ * <http://www.gnu.org/licenses/> for more details.
+ *
+ */
+
 #define _GNU_SOURCE
 
 #include <stdio.h>

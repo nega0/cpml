@@ -1,2 +1,66 @@
-Originally from http://taviso.decsystem.org/cpml.html and used for
-benchmarking Compaq Portable Maths Library against glibc's libm.
+cpml
+====
+
+"cpml" was originally developed by Tavis Ormandy for benchmarking the
+Compaq Portable Math Library[1] against libm on Alpha bases
+systems. You can read more about his project and original code at
+http://taviso.decsystem.org/cpml.html
+
+Looking for similar benchmarks for AMD's LibM[2], I found and adapted his
+code to my needs (x86_64 Opterons). Tavis gave me permission to
+release my changes, with his original code being licensed under the
+GPLv2.
+
+In no way is this software meant to be scientific, accurate or even
+correct. It was written solely to answer the question "Is it worth my
+time to investigate using these alternative math libraries?" There are
+current issues which reduce the accuracy of this code on AMD hardware,
+such as the direct use of the TSC being susceptible to drift. This may
+or may not be addressed in the future. 
+
+Future plans
+------------
+
+ * timing issues mentioned above. maybe.
+ * Intel MKL. Comparisons of one vendor's library on their
+   competitor's hardware are suspect, but would be convenient for
+   vendor library on vendor hardware comparisons.
+ * pretty print and parsable output options. I changed the original
+   pretty print to be more parsable for my use.
+ * multiple runs, and averaging of those runs.
+
+License
+-------
+
+GPLv2. See the included COPYING file or http://www.gnu.org/licenses/
+
+Warranty
+--------
+
+There is none. If something breaks it's your problem. In other words:
+
+BECAUSE THE PROGRAM IS LICENSED FREE OF CHARGE, THERE IS NO WARRANTY
+FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT
+WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER
+PARTIES PROVIDE THE PROGRAM "AS IS" WITHOUT WARRANTY OF ANY KIND,
+EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE
+PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME
+THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
+
+IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING
+WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY AND/OR
+REDISTRIBUTE THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR
+DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL
+DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE PROGRAM
+(INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING RENDERED
+INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A FAILURE OF
+THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS), EVEN IF SUCH HOLDER
+OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+Footnotes
+---------
+
+ [1] http://h21007.www2.hp.com/portal/site/dspp/menuitem.863c3e4cbcdc3f3515b49c108973a801/?ciid=a308e8749ee02110e8749ee02110275d6e10RCRD
+ [2] http://developer.amd.com/libraries/libm/
